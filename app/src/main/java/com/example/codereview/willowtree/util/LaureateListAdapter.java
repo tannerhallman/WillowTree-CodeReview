@@ -23,12 +23,13 @@ import java.util.List;
  */
 public class LaureateListAdapter extends RecyclerView.Adapter<LaureateListAdapter.LaureateViewHolder>{
 
+
     private List<Laureate> laureateList;
-    private Context ctx;
+    private Context ctx; // # Can be injected with Dagger
     private TypedArray colors;
     private TypedArray drawables;
 
-    public LaureateListAdapter(LaureateList laureates) {
+    public LaureateListAdapter(LaureateList laureates) { // # Can also be injected with Dagger
         this.laureateList = laureates.getLaureates();
         ctx = NobelPrizeListActivity.getStaticContext();
         Resources res = ctx.getResources();
@@ -38,16 +39,19 @@ public class LaureateListAdapter extends RecyclerView.Adapter<LaureateListAdapte
 
     @Override
     public LaureateListAdapter.LaureateViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View laureateListElementView = LayoutInflater.from(parent.getContext()).inflate(R.layout.laureate_list_element, parent, false);
+        View laureateListElementView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.laureate_list_element, parent, false);
         return new LaureateViewHolder(laureateListElementView);
     }
 
+    //
     @Override
     public void onBindViewHolder(LaureateListAdapter.LaureateViewHolder laureateHolder, int position) {
         //Use modulus to get a modifier for the color order based on position
         int colorModifier = position%colors.length();
         int backgroundColor = colors.getColor(colorModifier, 0);
 
+        // # Very simple straightforward view assignments promotes readability. Nice work!
         //Set content of views from the element of the laureate list at this position
         Laureate currentLaureate = laureateList.get(position);
         laureateHolder.laureateNameTextView.setText(currentLaureate.getFullName());
@@ -60,7 +64,8 @@ public class LaureateListAdapter extends RecyclerView.Adapter<LaureateListAdapte
         }else{
             laureateHolder.laureateDiedRelativeLayout.setVisibility(View.GONE);
         }
-        PrizeListAdapter prizeListAdapter = new PrizeListAdapter(ctx, R.layout.prize_list_element, currentLaureate.getPrizes(), colors, drawables, colorModifier);
+        PrizeListAdapter prizeListAdapter = new PrizeListAdapter(ctx, R.layout.prize_list_element,
+                currentLaureate.getPrizes(), colors, drawables, colorModifier);
         laureateHolder.laureatePrizeList.setAdapter(prizeListAdapter);
     }
 

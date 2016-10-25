@@ -27,7 +27,8 @@ public class PrizeListAdapter extends ArrayAdapter<Prize> {
     private TypedArray drawables;
     private int colorModifier;
 
-    public PrizeListAdapter(Context context, int resource, List<Prize> prizes, TypedArray colors, TypedArray drawables, int colorModifier) {
+    public PrizeListAdapter(Context context, int resource, List<Prize> prizes, TypedArray colors,
+                            TypedArray drawables, int colorModifier) {
         super(context, resource, prizes);
         this.ctx = context;
         this.layoutResource = resource;

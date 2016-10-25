@@ -16,7 +16,10 @@ public class ApiHandler {
     protected static final String BORNCOUNTRY = NobelPrizeListActivity.getStaticContext().getString(R.string.bornCountry);
     protected static final String POLAND = NobelPrizeListActivity.getStaticContext().getString(R.string.poland);
 
-    public static GSONGetRequest<LaureateList> getLaureateListObject(final Response.Listener<LaureateList> listener, final Response.ErrorListener errorListener)
+    // # Can inject listeners using Dagger or  this would also be a good time
+    // #   to use RxJava instead of handling all the listeners and the callbacks.
+    public static GSONGetRequest<LaureateList> getLaureateListObject(
+            final Response.Listener<LaureateList> listener, final Response.ErrorListener errorListener)
     {
         //Construct the api url and return a new GSONGetRequest
         final String url = APIURL+"?"+BORNCOUNTRY+"="+POLAND;

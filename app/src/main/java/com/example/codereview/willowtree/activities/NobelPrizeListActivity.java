@@ -38,12 +38,28 @@ import com.example.codereview.willowtree.util.Singleton;
 
 import java.util.Random;
 
+
+/*
+ *     Code Review by Tanner Hallman - October 25th, 2016
+ *     # - Indication of Code Review Comment
+ *
+ *     Overall, great job + solid code base (and love the UI). It could be cleaned up with
+ *     dagger for dependency injection for the Context, RxJava to help with the
+ *     listeners and GSON requests, and Butterknife with the View injection!
+ *
+ *     Notes: Would have loved to see more tests as they are important to build confidence.
+ *     Also, be careful with writing to static fields within the method instances.
+ *     It is also interesting to think about storing the content offline, so that the
+ *     app still holds value when no internet access is found.
+ */
 public class NobelPrizeListActivity extends AppCompatActivity {
 
     protected static final String TAG = NobelPrizeListActivity.class.getSimpleName();
 
     private static Context staticContext;
 
+    // # These views can all be automatically injected with Butterknife!
+    // # Super easy to do and you can read up on it here https://github.com/JakeWharton/butterknife
     private ProgressBar progressBar;
     private Button refreshButton;
     private LinearLayout errorView;
@@ -57,8 +73,12 @@ public class NobelPrizeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_noble_prize_list);
 
+        // # Dependency injection using Dagger can handle this for you
+        // #  check out this SO post for more information
+        // #  http://stackoverflow.com/questions/23436984/dagger-with-android-how-do-i-inject-the-current-context
         staticContext = this;
 
+        // # All of these can also be taken care of by Butterknife
         errorView = (LinearLayout) findViewById(R.id.error_linearLayout);
         progressBar = (ProgressBar) findViewById(R.id.loading_progressBar);
         refreshButton = (Button) findViewById(R.id.error_refresh_button);
@@ -66,6 +86,7 @@ public class NobelPrizeListActivity extends AppCompatActivity {
 
         setProgressBarColor();
 
+        // # Butterknife can help with click listeners too!
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,12 +95,12 @@ public class NobelPrizeListActivity extends AppCompatActivity {
         });
 
         listRecyclerView = (RecyclerView)findViewById(R.id.laureateList_recyclerView);
-        RecyclerView.LayoutManager listLayoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager  listLayoutManager = new LinearLayoutManager(this);
         listRecyclerView.setLayoutManager(listLayoutManager);
     }
 
     @Override
-    protected void onStart(){
+    protected void onStart(){ // # Good to check for internet before requesting connection
         super.onStart();
         if(isOnline() || connectionIsOn(staticContext)) {
             errorView.setVisibility(View.GONE);
@@ -102,7 +123,7 @@ public class NobelPrizeListActivity extends AppCompatActivity {
      * is used as the cancel button and the "cancel button" is used to load wifi settings.
      *
      */
-    private void showNetworkDialog(){
+    private void showNetworkDialog(){ // # Easy to follow
         AlertDialog.Builder builder = new AlertDialog.Builder(staticContext);
         if(isAirplaneModeOn(staticContext)){
             builder.setMessage(getString(R.string.airplane_mode_enabled_dialogue_string));
@@ -151,7 +172,7 @@ public class NobelPrizeListActivity extends AppCompatActivity {
     /**
      * Sets the color of the progressBar to one randomly chosen from the UI colors
      */
-    private void setProgressBarColor(){
+    private void setProgressBarColor(){ // # Makes the UI Pop - Nice work.
         Resources res = getResources();
         TypedArray colors = res.obtainTypedArray(R.array.colors);
         Random rand = new Random();

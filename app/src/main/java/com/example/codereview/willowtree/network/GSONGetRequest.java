@@ -21,7 +21,9 @@ public class GSONGetRequest<T> extends Request<T>
     private final Type type;
     private final Response.Listener<T> listener;
 
-    public GSONGetRequest(final String url, final Type type, final Gson gson, final Response.Listener<T> listener, final Response.ErrorListener errorListener){
+    // # Dagger for constructor injections or RxJava would be great here!
+    public GSONGetRequest(final String url, final Type type, final Gson gson, final Response.Listener<T> listener,
+                          final Response.ErrorListener errorListener){
         super(Method.GET, url, errorListener);
         this.gson = gson;
         this.type = type;

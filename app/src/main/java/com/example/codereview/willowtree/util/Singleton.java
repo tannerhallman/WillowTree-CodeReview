@@ -15,6 +15,10 @@ public class Singleton extends Application {
     private static Singleton singletonInstance;
     private RequestQueue requestQueue;
 
+    // # Seems like this class could be almost completely replaced by dagger
+    // #    by using the @Singleton tag
+    // # Check out the docs here http://square.github.io/dagger/
+
     @Override
     public void onCreate()
     {

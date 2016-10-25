@@ -2,76 +2,94 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/th/Documents/adt-bundle-mac-x86_64-20140624/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1_19275625c0a5987346664d6b0c0741e1efbf820d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/th/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/library-1.0.19_632cf4bef32ec9fedfaf2b9ef118132f31e8a6f8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/th/Desktop/zip/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-22.2.1_2be3a0ddea0238db299e0c87008832fdc79d717b.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/Users/th/Desktop/zip/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.2.1_b5c0a599c930c20455fd379731119a2f6ffa90a7.jar" />
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_b5c0a599c930c20455fd379731119a2f6ffa90a7/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/th/Desktop/zip/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-22.2.1_4812e9e262286459f43b630257443ebe2d6bcc0a.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/Users/th/Desktop/zip/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1_edd07ce391236a02c6224ca9adf8b63594161099.jar" />
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_edd07ce391236a02c6224ca9adf8b63594161099/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/Users/th/Desktop/zip/app/build/intermediates/exploded-aar/com.github.frankiesardo/linearlistview/1.0.1/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="d52b800eb529f69bd5c807142349fe0967df8c99">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/com.github.frankiesardo-linearlistview-1.0.1_0519910df9254a3f6c8735bdd4d51dc51b86e6d0.jar" />
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.frankiesardo-linearlistview-1.0.1_0519910df9254a3f6c8735bdd4d51dc51b86e6d0/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
+        jar="/Users/th/Desktop/zip/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-22.2.1_2be3a0ddea0238db299e0c87008832fdc79d717b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/th/Desktop/zip/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="efd4ae281b0d5b75311fda0fb2e30740cd8d08a5">
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8dc98cc424306f6bc778b8a1ee35b5008728fd7e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/th/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/library-1.0.19_632cf4bef32ec9fedfaf2b9ef118132f31e8a6f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/th/Desktop/zip/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_4812e9e262286459f43b630257443ebe2d6bcc0a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/th/Documents/adt-bundle-mac-x86_64-20140624/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_19275625c0a5987346664d6b0c0741e1efbf820d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/th/Desktop/zip/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="cfa07840e031a33a697bf0a522dd4410e77b8144">
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ca7c5d68899b3b027fa0ff5b02498025d63c4234/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/th/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/pre-dexed/debug/gson-2.3.1_3238a448acb2167660269945bd19a480e594d789.jar" />
+        <dex dex="/Users/th/Desktop/zip/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.3.1_3238a448acb2167660269945bd19a480e594d789/classes.dex" />
     </item>
 
 </items>
